@@ -1,0 +1,3 @@
+Enumeration:
+
+Keşif aşaması yalnızca belirli bir dereceye kadar güvenlik açıklarını belirlemeye yardımcı olur, ancak Numaralandırma, kullanıcılar, gruplar ve hatta sistem düzeyinde ayrıntılar - yönlendirme tabloları gibi tüm ayrıntıları öğrenmemize yardımcı olur. Etik hacking'in bu aşaması, hedef ortamda neyin test edileceğine dair uçtan uca bilgi edinmektir. Sistem üzerinde tam kontrol elde etmek için araçlar kullanılır.

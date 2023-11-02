@@ -1,0 +1,11 @@
+Güvensiz tasarım nedir?  
+
+Güvensiz tasarım, "eksik veya etkisiz kontrol tasarımı" olarak ifade edilen farklı zayıflıkları temsil eden geniş bir kategoridir. Güvensiz tasarım diğer tüm İlk 10 risk kategorilerinin kaynağı değildir. Güvensiz tasarım ile güvensiz uygulama arasında bir fark vardır. Tasarım kusurları ile uygulama kusurları arasında ayrım yapmamızın bir nedeni vardır; bunların farklı kök nedenleri ve düzeltme yolları vardır. Güvenli bir tasarım yine de istismar edilebilecek güvenlik açıklarına yol açan uygulama kusurlarına sahip olabilir. Güvensiz bir tasarım mükemmel bir uygulama ile düzeltilemez çünkü tanım gereği, gerekli güvenlik kontrolleri hiçbir zaman belirli saldırılara karşı savunmak için oluşturulmamıştır. Güvensiz tasarıma katkıda bulunan faktörlerden biri, geliştirilmekte olan yazılım veya sistemin doğasında bulunan iş riski profilinin eksikliği ve dolayısıyla hangi düzeyde güvenlik tasarımının gerekli olduğunun belirlenememesidir.
+
+Örnek Saldırı Senaryoları:
+
+Senaryo #1: Bir kimlik bilgisi kurtarma iş akışı, NIST 800-63b, OWASP ASVS ve OWASP Top 10 tarafından yasaklanmış olan "sorular ve cevaplar" içerebilir. Sorular ve cevaplar, cevapları birden fazla kişi bilebileceği için kimlik kanıtı olarak güvenilir değildir, bu yüzden yasaklanmıştır. Bu tür kodlar kaldırılmalı ve daha güvenli bir tasarımla değiştirilmelidir.  
+  
+Senaryo #2: Bir sinema zinciri grup rezervasyon indirimlerine izin verir ve depozito talep etmeden önce en fazla on beş katılımcıya sahiptir. Saldırganlar bu akışı tehdit olarak modelleyebilir ve birkaç taleple altı yüz koltuğu ve tüm sinemaları aynı anda rezerve edip edemeyeceklerini test ederek büyük bir gelir kaybına neden olabilirler.  
+  
+Senaryo #3: Bir perakende zincirinin e-ticaret web sitesi, açık artırma web sitelerini yeniden satmak için yüksek kaliteli ekran kartları satın alan karaborsacılar tarafından işletilen botlara karşı korumaya sahip değildir. Bu durum, ekran kartı üreticileri ve perakende zinciri sahipleri için korkunç bir tanıtım yaratır ve bu kartları herhangi bir fiyattan elde edemeyen meraklılarla aralarının bozulmasına neden olur. Dikkatli bir anti-bot tasarımı ve birkaç saniye içinde yapılan satın alımlar gibi alan mantığı kuralları, gerçek olmayan satın alımları tespit edebilir ve bu tür işlemleri reddedebilir.
