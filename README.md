@@ -163,3 +163,70 @@ Hedef Web sitemizin hangi teknolojileri kullandığını bilmek faydalı olacakt
 whatweb http://x.x.x.x
 ```
 ![Pasted image 20231025191134](https://github.com/Deaxu/Web-App-Sizma-Testi/assets/116658892/228d55b9-104c-4b6c-9de8-bcc7d9323fe5)
+
+- Wappalyzer:
+Tarayıcı uzantısıdır. İncelemek için hedef siteyi ziyaret etmek yeterlidir.
+
+![Pasted image 20231025190755](https://github.com/Deaxu/Web-App-Sizma-Testi/assets/116658892/673a59c6-ece8-4081-b3fa-8a46ac2ee4f9)
+
+## Bilinen Dosyalar
+
+Tarayıcı üzerinden erişebileceğiniz iyi bilinen dosyaları kontrol edin, bunlar hedefte mevcut olabilir:
+
+- robots.txt Dosyası
+-Otomatik spidering araçları robot veya bot olarak adlandırılır.
+-Robotların sitede indexleyeceği sayfaları kontrol etmek amacıyla robots.txt dosyası kullanılır.
+-Web uygulama sayfasının ana dizininde herkesin ulaşabileceği şekilde bulunur.
+-Bu dosya sayesinde kritik dizinler bulunabilir
+
+![image](https://github.com/Deaxu/Web-App-Sizma-Testi/assets/116658892/1bd1c5a3-898a-4dcb-953e-ac6d2ed9c63a)
+
+- .git: Çok az sayıda web sitesi kaynak kodlarını bu uç nokta aracılığıyla yanlışlıkla ifşa edebilir. Bunu tespit ederseniz, gerçek dünyada bir P1 sorunu vardır, çünkü özel bir kaynak kodunun bu şekilde ifşa edilmesi kabul edilemez ve birçok ilginç bilgiyi açığa çıkarabilir.
+
+## Subdomain Enumeration
+
+Subdomain Enumeration (Alt alan adı numaralandırma) nedir?  
+
+Alt alan adı numaralandırma, bir veya daha fazla alan adı için alt alan adları bulma işlemidir. Keşif aşamasının önemli bir parçasıdır.
+
+ - Brute Force Enumeration
+ 
+1)  ````gobuster dns -t 30 -w <wordlist dosya yolu> -d x.x.x.x````
+
+-dns: DNS subdomain bruteforcing mode.
+-d: target domain.
+-t <n>: number of concurrent threads (default 10).
+-w <wordlist>`: path to the wordlist.
+
+2)  ````amass enum -brute -w subdomains.txt -d example.com -o results.txt````
+ 
+-brute: Execute brute forcing after searches.
+-w: Path to wordlist file.
+-d: Domain names separated by commas.
+-o`: Path to the text file containing terminal stdout/stderr
+
+## Directory Bruteforce
+
+Hedef web sitesinde gezinirken bazı dosya ve dizinleri bulabilirsiniz, ancak kullanıcı için o kadar belirgin olmayan daha gizli şeyleri bulmak için Directory Busting gibi araçları kullanabiliriz:
+## Wfuzz
+
+WFuzz, Kali Linux'ta bulunan bir komut satırı yardımcı programıdır. Web uygulamalarındaki yaygın güvenlik açıklarını fuzzing yöntemiyle keşfetmek için kullanılır. Fuzzing, herhangi bir girdinin web uygulamasını tehlikeye atıp atmadığını belirlemek için bir web uygulamasıyla bilinen birçok savunmasız girdiyi deneme kavramıdır.
+
+wfuzz -c -W /usr/share/wfuzz/wordlist/dir/common.txt --hc 400,404,403 http://x.x.x.x
+
+Burada -c seçeneği renkli çıktı için; -W kelime listesi için; -hc belirtilen kod/satır/kelimeler/harfler ile yanıtları gizlemek için kullanılır. Ayrıca Kali Linux'unuzda yerleşik olarak bulunur.
+
+![Pasted image 20231102193807](https://github.com/Deaxu/Web-App-Sizma-Testi/assets/116658892/7da16147-58ce-442c-8376-fb48d2091c04)
+
+## DirBuster
+
+DirBuster, web / uygulama sunucularındaki dizinleri ve dosya adlarını kaba kuvvetle bulmak için tasarlanmış çok iş parçacıklı bir java uygulamasıdır. DirBuster toplam 9 farklı liste ile birlikte gelir; bu da DirBuster'ı gizli dosya ve dizinleri bulmada son derece etkili kılar.
+
+Benzer şekilde, terminali açın ve Dirbuster yazın, ardından aşağıdaki resimde gösterildiği gibi hedef URL'yi girin ve kaba kuvvet saldırısı için /usr/share/dirbuster/wordlis/ directory-list-2-3-medium.txt dosyasına göz atın.  
+  
+Dir seçeneğini /dvwa ile başlatmak için seçin, aracı saldırı için yapılandırdıktan sonra başlat'a tıklayın.
+
+![Pasted image 20231024115047](https://github.com/Deaxu/Web-App-Sizma-Testi/assets/116658892/98d0aa4a-62d5-4c3f-a0d5-b0fcd19a9250)
+
+![Pasted image 20231024115126](https://github.com/Deaxu/Web-App-Sizma-Testi/assets/116658892/9ab4248b-8ba2-4ff8-b755-728b1d69df94)
+
