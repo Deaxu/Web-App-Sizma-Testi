@@ -107,4 +107,43 @@ port: Port numarası
 
 ![Pasted image 20231024151641](https://github.com/Deaxu/Web-App-Sizma-Testi/assets/116658892/d8da199d-ee27-40ab-82ef-5e6de53ba143)
 
+### Araçlar (Tools) Hakkında
 
+Araçların bir çok özelliği ve parametreleri vardır. Bu repo'da gösterilen komutlar dışında
+kullanmaya çalıştığınız aracı nasıl kullanacağınızı bilmiyorsanız:
+
+örneğin:
+```
+nmap -h
+```
+çıktısı ile bir çok araçta olan "help" komutunu kullanarak yardım alabilirsiniz:
+
+![Pasted image 20231024154337](https://github.com/Deaxu/Web-App-Sizma-Testi/assets/116658892/9386147f-498d-4f35-a1d1-6964f5d8d7da)
+
+# 2-Bilgi Toplama
+
+## Keşif
+
+- HTML Kaynak Kodu
+-Web sayfasına ait kaynak kodu görüntülenerek içinde hassas bilgi barındırıp barındırmadığı kontrol edilir.
+
+![Pasted image 20231024152645](https://github.com/Deaxu/Web-App-Sizma-Testi/assets/116658892/884ab334-579e-4d5e-956a-1a296ad61b7f)
+
+- GİRDİ KABUL EDEN SAYFALAR
+-Web sitesinde yer alan ve girdi kabul eden veya form içeren sayfalar bulunarak bu sayfalara yönelik "kaba kuvvet", "şifre tahmini", SQL injection, Insecure Direct Object References gibi saldırı yöntemleri denenebilir.
+-Kullanıcı adı ve parola kabul eden bir sayfa ise bu sayfalar taklit edilerek "Phishing" saldırılarında çalışanların kullanıcı adları ve parolaları çalınabilir. Bu sayfalarda kaba kuvvet ve sözlük saldırıları gerçekleştirilebilir.
+
+![Pasted image 20231024152822](https://github.com/Deaxu/Web-App-Sizma-Testi/assets/116658892/916b542e-28e9-4247-a8a2-3d74333f7df2)
+
+
+- PARAMETRİK URL’LER
+-Kullanıcıdan girdi kabul eden sayfalar gibi, parametrik URL’ler de bulunarak bu URL’lerdeki parametrelere yönelik SQL injection, XSS, dosya ekleme gibi saldırı vektörleri düzenlenebilir.
+-http://www.ornek.com/login.php?username=user1&password=sifre123 
+-http://example.com/getUserProfile.jsp?item=../../../../etc/passwd 
+-http://www.mysite.com/accounts/id=51741054
+
+
+- HATA SAYFALARI
+-Hata sayfaları saldırgana hedef sistem hakkında web sunucusu adı, yazılımı, versiyonu, kullanılan programlar, dosya yolu gibi kritik bilgiler verebilir. Hata sayfalarının kritik bilgi vermeyecek şekilde özelleştirilmesi önerilmektedir.
+
+![Pasted image 20231024153134](https://github.com/Deaxu/Web-App-Sizma-Testi/assets/116658892/6ae9c0e1-9b9e-4325-b88d-32f80b9e5568)
