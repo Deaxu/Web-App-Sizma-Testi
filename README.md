@@ -120,7 +120,7 @@ nmap -h
 
 ![Pasted image 20231024154337](https://github.com/Deaxu/Web-App-Sizma-Testi/assets/116658892/9386147f-498d-4f35-a1d1-6964f5d8d7da)
 
-# 2-Bilgi Toplama
+# 2) Bilgi Toplama
 
 ## Keşif
 
@@ -147,3 +147,19 @@ nmap -h
 -Hata sayfaları saldırgana hedef sistem hakkında web sunucusu adı, yazılımı, versiyonu, kullanılan programlar, dosya yolu gibi kritik bilgiler verebilir. Hata sayfalarının kritik bilgi vermeyecek şekilde özelleştirilmesi önerilmektedir.
 
 ![Pasted image 20231024153134](https://github.com/Deaxu/Web-App-Sizma-Testi/assets/116658892/6ae9c0e1-9b9e-4325-b88d-32f80b9e5568)
+
+# 3) Servis Analizi
+
+## Enumaration
+
+Keşif aşaması yalnızca belirli bir dereceye kadar güvenlik açıklarını belirlemeye yardımcı olur, ancak Numaralandırma, kullanıcılar, gruplar ve hatta sistem düzeyinde ayrıntılar - yönlendirme tabloları gibi tüm ayrıntıları öğrenmemize yardımcı olur. Etik hacking'in bu aşaması, hedef ortamda neyin test edileceğine dair uçtan uca bilgi edinmektir. Sistem üzerinde tam kontrol elde etmek için araçlar kullanılır.
+
+## Kullanılan Web Teknolojileri
+
+Hedef Web sitemizin hangi teknolojileri kullandığını bilmek faydalı olacaktır. Daha sonra aşağıdaki araçları kullanarak tanımlayın:  
+  
+- Whatweb:
+```
+whatweb http://x.x.x.x
+```
+![Pasted image 20231025191134](https://github.com/Deaxu/Web-App-Sizma-Testi/assets/116658892/228d55b9-104c-4b6c-9de8-bcc7d9323fe5)
