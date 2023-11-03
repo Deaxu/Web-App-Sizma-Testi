@@ -245,7 +245,7 @@ Dir seçeneğini /dvwa ile başlatmak için seçin, aracı saldırı için yapı
 ![Pasted image 20231024115126](https://github.com/Deaxu/Web-App-Sizma-Testi/assets/116658892/9ab4248b-8ba2-4ff8-b755-728b1d69df94)
 
 ## Port Scanning(Tarama)
-
+### Biraz Ağ Bilgisi
 #### TCP Nedir? (kaynak: https://berqnet.com/blog/port)
 
 **TCP**; bilgisayarlar arası iletişimde veri alışverişinin yanı sıra kimlik doğrulaması da sağlayan bir port türüdür.
@@ -295,7 +295,8 @@ HTTP Durum Kodları ve Anlamları:
 
 https://learning.mlytics.com/the-internet/http-response-status-codes/
 
-## Nmap ("Network Mapper") ağ keşfi ve güvenlik denetimi için ücretsiz ve açık kaynaklı bir yardımcı programdır. Birçok sistem ve ağ yöneticisi, ağ envanteri, hizmet yükseltme programlarını yönetme ve ana bilgisayar veya hizmet çalışma süresini izleme gibi görevler için de yararlı bulmaktadır.
+## Nmap 
+("Network Mapper") ağ keşfi ve güvenlik denetimi için ücretsiz ve açık kaynaklı bir yardımcı programdır. Birçok sistem ve ağ yöneticisi, ağ envanteri, hizmet yükseltme programlarını yönetme ve ana bilgisayar veya hizmet çalışma süresini izleme gibi görevler için de yararlı bulmaktadır.
 
 1) IP veya ana bilgisayara karşı Temel Nmap Taraması
 ```
