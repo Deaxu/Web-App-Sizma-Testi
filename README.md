@@ -193,7 +193,6 @@ Alt alan adı numaralandırma, bir veya daha fazla alan adı için alt alan adla
 
  - Brute Force Enumeration
  
-1)
 ```
 gobuster dns -t 30 -w <wordlist dosya yolu> -d x.x.x.x
 ```
@@ -206,7 +205,6 @@ gobuster dns -t 30 -w <wordlist dosya yolu> -d x.x.x.x
 
 -w <wordlist>`: path to the wordlist.
 
-2)
 ```
 amass enum -brute -w subdomains.txt -d example.com -o results.txt
 ```
@@ -274,24 +272,24 @@ Ne işe yaradığını tek bir cümle ile özetleyecek olursak port; **bilgisay
 
 #### En Popüler Portlar
 
-- 21 FTP
-- 22 SSH
-- 23 TELNET
-- 25 SMTP
-- 53 DNS
-- 80 HTTP
-- 110 POP3
-- 115 SFTP
-- 135 RPC
-- 143 IMAP
-- 194 IRC
-- 443 SSL
-- 445 SMB
-- 1433 MSSQL
-- 3306 MYSQL
-- 3389 Remote Desktop
+> - 21 FTP
+> - 22 SSH
+> - 23 TELNET
+> - 25 SMTP
+> - 53 DNS
+> - 80 HTTP
+> - 110 POP3
+> - 115 SFTP
+> - 135 RPC
+> - 143 IMAP
+> - 194 IRC
+> - 443 SSL
+> - 445 SMB
+> - 1433 MSSQL
+> - 3306 MYSQL
+> - 3389 Remote Desktop
 
-HTTP Durum Kodları ve Anlamları:
+#### HTTP Durum Kodları ve Anlamları:
 
 https://learning.mlytics.com/the-internet/http-response-status-codes/
 
@@ -309,6 +307,8 @@ https://learning.mlytics.com/the-internet/http-response-status-codes/
 3) Yerel veya uzak bir sunucuda belirli portları veya tüm port aralıklarını tarayın
 ```
 - nmap -p 1-65535 x.x.x.x
+```
+```
 - nmap -p 80,443 x.x.x.x
 ```
 4) Birden fazla IP adresini tarayın
@@ -334,6 +334,8 @@ https://learning.mlytics.com/the-internet/http-response-status-codes/
 9) TCP veya UDP protokollerini kullanarak tarama
 ```
 - TCP : nmap -sT x.x.x.x
+```
+```
 - UDP:  nmap -sU x.x.x.x
 ```
 10) Nmap kullanarak CVE tespiti
@@ -356,8 +358,10 @@ Soru: Bu kadar komut arasından en iyisi hangisi?
 Cevap: Her durumda en iyisi sayılan bir komut yok. Her komutun farklı durumlar için üstünlüğü olabilir.
 
 Ancak genelde yapılması gereken: 
-````
+```
 nmap -sn IP > aktif_ipler.txt komutu ile aktif sunucuların tespit edilmesi ve bir dosyaya aktarılması
+```
+```
 nmap -sS -sU -T4 -A -v -iL aktif_ipler.txt komutu ile TCP ve UDP portlarının taranması
-````
+```
 
