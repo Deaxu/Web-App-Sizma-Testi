@@ -41,17 +41,21 @@ Sızma Testi Çeşitleri Nelerdir?
 - Black Box
 
 -Testi yapacak kişiye çok az bilgi veya hiçbir bilgi sağlanmaz.
+
 -Hedef, çözülmesi gereken bir kara kutu olarak görülebilir.
+
 -Gözden kaçan uygulamalar olabilir.
 
 - Grey Box
 
 -Belli bilgiler dışındaki bilgiler verilmez ve testi yapan kişinin bulması beklenir.
+
 -Bu testte bilgi toplama aşaması çok önemlidir.
 
 - White Box
 
 -Kimlik bilgileri, hedef URLler, uygulama haritası bilgileri sağlanır.
+
 -Gözden kaçan uygulama kalmaz.
 
 ## Sızma Testi Standartları
@@ -301,59 +305,59 @@ https://learning.mlytics.com/the-internet/http-response-status-codes/
 
 1) IP veya ana bilgisayara karşı Temel Nmap Taraması
 ```
-- nmap x.x.x.x
+nmap x.x.x.x
 ```
 2) Nmap Ping Taraması
 ```
-- nmap -sp x.x.x.0/24
+nmap -sp x.x.x.0/24
 ```
 3) Yerel veya uzak bir sunucuda belirli portları veya tüm port aralıklarını tarayın
 ```
-- nmap -p 1-65535 x.x.x.x
+nmap -p 1-65535 x.x.x.x
 ```
 ```
-- nmap -p 80,443 x.x.x.x
+nmap -p 80,443 x.x.x.x
 ```
 4) Birden fazla IP adresini tarayın
 ```
-- nmap x.x.x.x y.y.y.y
+nmap x.x.x.x y.y.y.y
 ```
 5) En popüler portları tarayın
 ```
-- nmap --top-ports 20 x.x.x.x
+nmap --top-ports 20 x.x.x.x
 ```
 6) Bir metin dosyasından okuyarak hostları ve IP adreslerini tarama
 ```
-- nmap -iL list.txt
+nmap -iL list.txt
 ```
 7) Nmap tarama sonuçlarınızı bir dosyaya kaydedin
 ```
-- nmap -oN output.txt x.x.x.x
+nmap -oN output.txt x.x.x.x
 ```
 8) Servis/daemon sürümlerini algılama
 ```
-- nmap -sV x.x.x.x
+nmap -sV x.x.x.x
 ```
 9) TCP veya UDP protokollerini kullanarak tarama
 ```
-- TCP : nmap -sT x.x.x.x
+TCP : nmap -sT x.x.x.x
 ```
 ```
-- UDP:  nmap -sU x.x.x.x
+UDP:  nmap -sU x.x.x.x
 ```
 10) Nmap kullanarak CVE tespiti
 CVE:  (Common Vulnerabilities and Exposures), halka açık olarak sunulan bir zafiyet sözlüğüdür.Bu sözlüğün yaratılma amacı zafiyetler hakkında yapılan bilgi paylaşımını kolaylaştırmaktır. Bir CVE kaydı, zafiyet hakkında bir açıklama, bir zafiyet kimlik numarası ve en az bir halka açık referanstan oluşur.
 ```
-- nmap -Pn --script vuln http://x.x.x.x
+nmap -Pn --script vuln http://x.x.x.x
 ```
 11) Uzak ana bilgisayarlardaki kötü amaçlı yazılım bulaşmalarını tespit etme
 Yaygın bir kötü amaçlı yazılım taraması kullanılarak gerçekleştirilebilir:
 ```
-- nmap -sV --script=http-malware-host http://x.x.x.x
+nmap -sV --script=http-malware-host http://x.x.x.x
 ```
 12) Nmap İşletim Sistemi Tespiti (-O)
 ```
-- nmap -O x.x.x.x
+nmap -O x.x.x.x
 ```
 ![Pasted image 20231102183843](https://github.com/Deaxu/Web-App-Sizma-Testi/assets/116658892/c5696eb7-ad8c-44d7-b52e-6a0d31dbef9b)
 
@@ -362,11 +366,13 @@ Cevap: Her durumda en iyisi sayılan bir komut yok. Her komutun farklı durumlar
 
 Ancak genelde yapılması gereken: 
 ```
-nmap -sn IP > aktif_ipler.txt komutu ile aktif sunucuların tespit edilmesi ve bir dosyaya aktarılması
+nmap -sn IP > aktif_ipler.txt 
 ```
+komutu ile aktif sunucuların tespit edilmesi ve bir dosyaya aktarılması
 ```
-nmap -sS -sU -T4 -A -v -iL aktif_ipler.txt komutu ile TCP ve UDP portlarının taranması
+nmap -sS -sU -T4 -A -v -iL aktif_ipler.txt 
 ```
+komutu ile TCP ve UDP portlarının taranması
 
 ## Zafiyetler 
 
