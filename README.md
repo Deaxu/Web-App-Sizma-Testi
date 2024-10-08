@@ -415,3 +415,5 @@ Yatay erişim kontrolleri ile farklı kullanıcılar aynı türdeki kaynakların
 Bağlama bağlı erişim kontrolleri, uygulamanın durumuna veya kullanıcının onunla etkileşimine bağlı olarak işlevlere ve kaynaklara erişimi kısıtlar.  
   
 Bağlama bağlı erişim kontrolleri, kullanıcının yanlış sırada eylem gerçekleştirmesini önler. Örneğin, bir perakende web sitesi, kullanıcıların ödeme yaptıktan sonra alışveriş sepetlerinin içeriğini değiştirmelerini engelleyebilir.
+
+Under Maintence...
